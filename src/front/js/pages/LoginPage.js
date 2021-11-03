@@ -61,15 +61,6 @@ export const LoginPage = () => {
 							onChange={handleChange}
 						/>
 					</div>
-					<button
-						type="button"
-						className="btn btn-primary btn-lg my-3 me-3"
-						onClick={() => {
-							actions.addContacts(newContact);
-							props.history.push("/");
-						}}>
-						Save!
-					</button>
 					<Link className="mt-3 w-100 text-center fs-4" to="/">
 						Back to contacts
 					</Link>
