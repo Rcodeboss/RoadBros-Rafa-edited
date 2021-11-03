@@ -7,11 +7,8 @@ export const LoginPage = () => {
 	const { actions } = useContext(Context);
 
 	const [newContact, setnewContact] = useState({
-		full_name: null,
 		email: null,
-		phone: null,
-		address: null,
-		agenda_slug: "RoadBros"
+		password: null
 	});
 
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
@@ -19,52 +16,39 @@ export const LoginPage = () => {
 	return (
 		<div className="container">
 			<div>
-				<h1 className="text-center mt-5">Add a new contact</h1>
+				<h1 className="text-center mt-5">Login Page</h1>
 				<form>
-					<div className="form-group">
-						<label>Full Name</label>
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Full Name"
-							name="full_name"
-							onChange={handleChange}
-						/>
-					</div>
 					<div className="form-group">
 						<label>Email</label>
 						<input
 							type="email"
 							className="form-control"
-							placeholder="Enter email"
+							placeholder="Email"
 							name="email"
 							onChange={handleChange}
 						/>
 					</div>
 					<div className="form-group">
-						<label>Phone</label>
+						<label>Password</label>
 						<input
-							type="phone"
+							type="password"
 							className="form-control"
-							placeholder="Enter phone"
-							name="phone"
+							placeholder="Password"
+							name="password"
 							onChange={handleChange}
 						/>
 					</div>
-					<div className="form-group">
-						<label>Address</label>
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Enter address"
-							name="address"
-							onChange={handleChange}
-						/>
-					</div>
-					<Link className="mt-3 w-100 text-center fs-4" to="/">
-						Back to contacts
-					</Link>
 				</form>
+				<Link to="/ClientHomePage">
+					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+						Client
+					</button>
+				</Link>
+				<Link to="/TruckerHomePage">
+					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+						Trucker
+					</button>
+				</Link>
 			</div>
 		</div>
 	);
