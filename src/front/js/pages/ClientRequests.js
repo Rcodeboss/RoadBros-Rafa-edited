@@ -23,11 +23,11 @@ export const ClientRequests = () => {
 								height="50%"
 								alt="..."
 							/>
-							<p className="mx-2 text-start">Name: {`${item.firstName} ${item.lastName}`}</p>
+							<p className="mx-2 text-start">Name: {item.fullName}</p>
 							<p className="mx-2 text-start">City: {item.city}</p>
-							<p className="mx-2 text-start">Vehicle Model: {item.carModel}</p>
-							<p className="mx-2 text-start">Vehicle Make: {item.carMake}</p>
-							<p className="mx-2 text-start">Vehicle Year: {item.carYear}</p>
+							<p className="mx-2 text-start">Vehicle Model: {item.vehicleModel}</p>
+							<p className="mx-2 text-start">Vehicle Make: {item.vehicleMake}</p>
+							<p className="mx-2 text-start">Vehicle Year: {item.vehicleYear}</p>
 
 							<Link to="/MessagesPage">
 								<button className="btn btn-primary m-2 p-1">Accept</button>

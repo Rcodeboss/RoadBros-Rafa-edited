@@ -4,8 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			user: {
 				id: "",
 				type: "",
-				firstName: "",
-				lastName: "",
+				fullName: "",
 				picture: "",
 				city: "",
 				email: "",
@@ -13,41 +12,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 				licensePicture: "",
 				RegistrationPicture: "",
 				InsurancePicture: "",
-				carModel: "",
-				carMake: "",
-				carYear: "",
+				vehicleModel: "",
+				vehicleMake: "",
+				vehicleYear: "",
 				rating: ""
 			},
 			listOfRequests: [
 				{
-					picture: "fill up wit stuff",
-					firstName: "",
-					lastName: "",
+					picture: "",
+					fullName: "Jenniffer Medina",
 					city: "",
 					service: "",
-					carModel: "",
-					carMake: "",
-					carYear: ""
+					vehicleModel: "",
+					vehicleMake: "",
+					vehicleYear: ""
 				},
 				{
 					picture: "",
-					firstName: "",
-					lastName: "",
+					fullName: "Gloria Perez",
 					city: "",
 					service: "",
-					carModel: "",
-					carMake: "",
-					carYear: ""
+					vehicleModel: "",
+					vehicleMake: "",
+					vehicleYear: ""
 				},
 				{
 					picture: "",
-					firstName: "",
-					lastName: "",
+					fullName: "Maria Gomez",
 					city: "",
 					service: "",
-					carModel: "",
-					carMake: "",
-					carYear: ""
+					vehicleModel: "",
+					vehicleMake: "",
+					vehicleYear: ""
 				}
 			]
 		},
