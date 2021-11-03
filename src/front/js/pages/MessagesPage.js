@@ -9,15 +9,17 @@ export const MessagesPage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
-			<p>This is the MessagesPage</p>
+		<div className="container m-5 text-center">
+			<h1>Messaging Page</h1>
 
-			<div className="card">
+			<h5 className="m-4">Here, you can message your client/Trucker direclty!</h5>
+
+			<div className="card mb-3">
 				<div className="row d-flex justify-content-start px-5 pt-5 pb-1">
-					<div className="col-2 bg-info text-start p-2 rounded">Hello, I am 20 mins away.</div>
+					<div className="col-3 bg-info text-start p-2 rounded">Hello, I am 20 mins away.</div>
 				</div>
 				<div className="row d-flex justify-content-end px-5 pb-5 pt-1">
-					<div className="col-2 bg-primary text-start p-2 rounded">Thank You for keeping me updated!</div>
+					<div className="col-3 bg-primary text-start p-2 rounded">Thank You for keeping me updated!</div>
 				</div>
 				<div className="card-footer d-inline-flex align-items-center justify-content-start">
 					<div className="input-group m-3">
@@ -34,12 +36,11 @@ export const MessagesPage = () => {
 					</div>
 				</div>
 			</div>
-
 			<Link to="/ServiceCompleted">
-				<button className="btn btn-primary m-3">Service Completed (Client)</button>
+				<button className="btn btn-primary m-3 mb-5">Service Completed (Client)</button>
 			</Link>
 			<Link to="/ManagingService">
-				<button className="btn btn-primary m-3">Manage Service (Trucker)</button>
+				<button className="btn btn-primary m-3 mb-5">Manage Service (Trucker)</button>
 			</Link>
 		</div>
 	);

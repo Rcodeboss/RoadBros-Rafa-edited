@@ -5,12 +5,13 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 
 //PAGES
-import { Navbar } from "./component/navbar";
+import { MyNavbar } from "./component/navbar";
 
 import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
 
 import { ServiceMenu } from "./pages/ServiceMenu";
+import { AddVehicles } from "./pages/AddVehicles";
 import { PaymentPage } from "./pages/PaymentPage";
 
 import { AwaitingResponse } from "./pages/AwaitingResponse";
@@ -36,7 +37,7 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<MyNavbar />
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -76,6 +77,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/ManagingService">
 							<ManagingService />
+						</Route>
+						<Route exact path="/AddVehicles">
+							<AddVehicles />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

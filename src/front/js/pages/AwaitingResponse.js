@@ -10,13 +10,17 @@ export const AwaitingResponse = () => {
 
 	return (
 		<div className="container mt-5 text-center">
-			<p>This is the AwaitingResponse page</p>
-			<div className="spinner-border" role="status">
+			<h1 className="mb-4">Awaiting Repsonse Page</h1>
+
+			<div className="row spinner-border m-4" role="status">
 				<span className="visually-hidden">Loading...</span>
 			</div>
-			<Link to="/MessagesPage">
-				<button className="btn btn-primary m-3">Go to Messages</button>
-			</Link>
+
+			<div className="row m-2">
+				<Link to="/MessagesPage">
+					<button className="btn btn-primary m-3">Go to Messages</button>
+				</Link>
+			</div>
 		</div>
 	);
 };

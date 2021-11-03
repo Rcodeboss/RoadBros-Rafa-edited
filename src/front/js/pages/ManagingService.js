@@ -10,7 +10,7 @@ export const ManagingService = () => {
 
 	return (
 		<div className="container mt-5 text-center">
-			<p>This is the ManagingService Page</p>
+			<h1 className="mb-5">Manage your Service</h1>
 
 			<button className="btn btn-primary m-3">Start Service</button>
 

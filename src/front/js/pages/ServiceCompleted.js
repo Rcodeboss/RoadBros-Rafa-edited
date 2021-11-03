@@ -10,7 +10,13 @@ export const ServiceCompleted = () => {
 
 	return (
 		<div className="container mt-5 text-center">
-			<p>This is the ServiceCompleted page</p>
+			<h1>
+				Congratulations! <br />
+				Your Service was Completed
+			</h1>
+
+			<h5 className="m-4">Please rate your trucker below</h5>
+
 			<Link to="/RatingPage">
 				<button className="btn btn-primary m-3">Rate Trucker</button>
 			</Link>

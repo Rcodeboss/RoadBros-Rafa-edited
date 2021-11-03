@@ -3,65 +3,68 @@ import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const SignUpPage = () => {
+export const AddVehicles = () => {
 	const { actions } = useContext(Context);
 
-	const [newContact, setnewContact] = useState({
-		full_name: null,
-		email: null,
-		phone: null,
-		city: null
+	const [newVehicle, setnewVehicle] = useState({
+		vehicle_model: null,
+		vehicle_make: null,
+		vehicle_year: null,
+		vehicle_type: null
 	});
 
-	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
+	const handleChange = e => setnewVehicle({ ...newVehicle, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container text-center mt-5">
+		<div className="container mt-5 text-center">
 			<div>
-				<h1>Sign Up Page</h1>
+				<h1 className="text-center">Add Vehicles Page</h1>
 				<form className="text-start">
 					<div className="form-group my-1">
-						<label>Full Name</label>
+						<label>Vehicle Model</label>
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Full Name"
-							name="full_name"
+							placeholder="Vehicle Model"
+							name="vehicle_model"
 							onChange={handleChange}
 						/>
 					</div>
 					<div className="form-group my-1">
-						<label>Email</label>
-						<input
-							type="email"
-							className="form-control"
-							placeholder="Enter email"
-							name="email"
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="form-group my-1">
-						<label>Phone</label>
-						<input
-							type="phone"
-							className="form-control"
-							placeholder="Enter phone"
-							name="phone"
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="form-group my-1">
-						<label>City</label>
+						<label>Vehicle Make</label>
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Enter city"
-							name="city"
+							placeholder="Vehicle Make"
+							name="vehicle_make"
+							onChange={handleChange}
+						/>
+					</div>
+					<div className="form-group my-1">
+						<label>Vehicle Year</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Vehicle Year"
+							name="vehicle_year"
+							onChange={handleChange}
+						/>
+					</div>
+					<div className="form-group my-1">
+						<label>Vehicle type</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Vehicle type"
+							name="vehicle_type"
 							onChange={handleChange}
 						/>
 					</div>
 				</form>
-				<Link to="/PaymentPage">
+				<Link to="/AddVehicles">
+					<button className="btn btn-primary p-2 mt-3 me-3">Add Another Vehicle</button>
+				</Link>
+				<Link to="/ServiceMenu">
 					<button className="btn btn-primary p-2 mt-3">Next</button>
 				</Link>
 			</div>
@@ -69,6 +72,6 @@ export const SignUpPage = () => {
 	);
 };
 
-SignUpPage.propTypes = {
+AddVehicles.propTypes = {
 	history: PropTypes.object
 };
