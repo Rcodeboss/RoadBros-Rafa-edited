@@ -3,14 +3,28 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
-import { SignUpPage } from "./pages/SignUpPage";
-import { LoginPage } from "./pages/LoginPage";
-import { Single } from "./pages/single";
-import injectContext from "./store/appContext";
 
+//PAGES
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+
+import { LoginPage } from "./pages/LoginPage";
+import { SignUpPage } from "./pages/SignUpPage";
+
+import { ServiceMenu } from "./pages/ServiceMenu";
+import { PaymentPage } from "./pages/PaymentPage";
+
+import { AwaitingResponse } from "./pages/AwaitingResponse";
+import { MessagesPage } from "./pages/MessagesPage";
+import { ServiceCompleted } from "./pages/ServiceCompleted";
+import { RatingPage } from "./pages/RatingPage";
+
+import { ClientHomePage } from "./pages/ClientHomePage";
+import { TruckerHomePage } from "./pages/TruckerHomePage";
+
+import { ClientRequests } from "./pages/ClientRequests";
+import { ManagingService } from "./pages/ManagingService";
+
+import injectContext from "./store/appContext";
 
 //create your first component
 const Layout = () => {
@@ -27,23 +41,46 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
 						<Route exact path="/SignUpPage">
 							<SignUpPage />
 						</Route>
 						<Route exact path="/LoginPage">
 							<LoginPage />
 						</Route>
+						<Route exact path="/ServiceMenu">
+							<ServiceMenu />
+						</Route>
+						<Route exact path="/PaymentPage">
+							<PaymentPage />
+						</Route>
+						<Route exact path="/AwaitingResponse">
+							<AwaitingResponse />
+						</Route>
+						<Route exact path="/MessagesPage">
+							<MessagesPage />
+						</Route>
+						<Route exact path="/ServiceCompleted">
+							<ServiceCompleted />
+						</Route>
+						<Route exact path="/RatingPage">
+							<RatingPage />
+						</Route>
+						<Route exact path="/ClientHomePage">
+							<ClientHomePage />
+						</Route>
+						<Route exact path="/TruckerHomePage">
+							<TruckerHomePage />
+						</Route>
+						<Route exact path="/ClientRequests">
+							<ClientRequests />
+						</Route>
+						<Route exact path="/ManagingService">
+							<ManagingService />
+						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
